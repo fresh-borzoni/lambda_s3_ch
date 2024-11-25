@@ -83,7 +83,7 @@ class Seeder:
                 type String,
                 amount String
             )
-            ENGINE = S3('http://localstack:4566/transactions/2024/01/transactions.parquet', 'Parquet')
+            ENGINE = S3('http://localstack:4566/transactions/*/*/transactions.parquet', 'Parquet')
             SETTINGS 
                 s3_endpoint_url = 'http://localstack:4566',
                 s3_access_key_id = 'test',
